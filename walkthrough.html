@@ -121,10 +121,23 @@
 
   /* Prompt template */
   pre {
+    position: relative;
     background: #0b0d12; border: 1px solid var(--line); border-radius: 12px;
     padding: 16px 18px; overflow-x: auto; font-size: 0.9rem; color: #d7dbe4;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   }
+  .copy-btn {
+    position: absolute; top: 8px; right: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem; font-weight: 600; line-height: 1;
+    padding: 5px 10px; border-radius: 7px; cursor: pointer;
+    color: var(--muted); background: rgba(255,255,255,0.05);
+    border: 1px solid var(--line); opacity: 0.55;
+    transition: opacity .15s, color .15s, border-color .15s, background .15s;
+  }
+  pre:hover .copy-btn, .copy-btn:focus-visible { opacity: 1; }
+  .copy-btn:hover { color: var(--ink); border-color: var(--accent); background: rgba(201,162,39,0.12); }
+  .copy-btn.copied { color: #74d493; border-color: #3a9d57; background: rgba(58,157,87,0.14); opacity: 1; }
   .filelist { columns: 2; gap: 24px; }
   @media (max-width: 600px) { .filelist { columns: 1; } }
   .filelist a { display: block; padding: 6px 0; color: var(--ink); border-bottom: 1px dashed var(--line); }
@@ -326,6 +339,41 @@ Done when:
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    function copyText(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return fallbackCopy(text); });
+      }
+      return Promise.resolve(fallbackCopy(text));
+    }
+    function fallbackCopy(text) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        var ok = document.execCommand('copy'); document.body.removeChild(ta); return ok;
+      } catch (e) { return false; }
+    }
+    document.querySelectorAll('pre').forEach(function (pre) {
+      var text = pre.innerText.replace(/\n+$/, '');
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.textContent = 'Copy';
+      btn.setAttribute('aria-label', 'Copy to clipboard');
+      btn.addEventListener('click', function () {
+        copyText(text).then(function (ok) {
+          btn.textContent = ok ? 'Copied!' : 'Press Ctrl+C';
+          btn.classList.add('copied');
+          setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+        });
+      });
+      pre.appendChild(btn);
+    });
+  })();
+</script>
 
 </body>
 </html>
