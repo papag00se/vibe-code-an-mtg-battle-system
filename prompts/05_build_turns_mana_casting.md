@@ -1,4 +1,4 @@
-# Prompt 04 — Build turns, mana, and casting
+# Prompt 05 — Build turns, mana, and casting
 
 This is where Untap starts to feel like Magic: turns tick forward, lands tap for mana, and your first spells hit the table. Paste the prompt below into Codex and watch the loop come alive.
 

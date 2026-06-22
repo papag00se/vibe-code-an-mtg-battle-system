@@ -1,4 +1,4 @@
-# Prompt 01 — Build Scryfall card search
+# Prompt 02 — Build Scryfall card search
 
 Time for your first real spell. This is where Untap stops being a placeholder and starts pulling actual Magic cards out of thin air — type a name, get the card. Paste this into Codex.
 

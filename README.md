@@ -14,7 +14,7 @@ Want the big picture first? Open the live visual map at **https://papag00se.gith
 
 ## How to use this
 
-1. Get the project onto your machine. The easiest way? Don't even do it yourself — ask your AI agent to grab it for you:
+1. **Get this walkthrough onto your computer.** The first step is simply getting the project onto your machine — and you can just ask your AI agent to do it for you:
 
    ```text
    Clone https://github.com/papag00se/vibe-code-an-mtg-battle-system and open it so we can start building.
@@ -29,7 +29,7 @@ Want the big picture first? Open the live visual map at **https://papag00se.gith
 
 2. Start Codex in the project folder.
 3. Read [`docs/02_codex_and_ai_foundations.md`](docs/02_codex_and_ai_foundations.md) to get your bearings.
-4. Make your first move: open `prompts/00_bootstrap_repo.md` and paste it into Codex.
+4. Make your first build move: open `prompts/01_bootstrap_repo.md` and paste it into Codex.
 5. Keep `AGENTS.md` in the root — it's the house rulebook Codex reads on every turn.
 6. Work through the lessons in order. Resist the urge to skip to combat. (We know. We get it. Still: in order.)
 
@@ -93,4 +93,4 @@ Prompt Codex -> read the diff -> run the app/tests -> ask Codex to explain -> ma
 
 ## Your first move
 
-Open `prompts/00_bootstrap_repo.md`, paste it into Codex, and watch Untap come to life. See you on the battlefield.
+Open `prompts/00_clone_the_repo.md`, paste the clone prompt into Codex, and you're off — bootstrap the app with `prompts/01_bootstrap_repo.md` and watch Untap come to life. See you on the battlefield.

@@ -1,6 +1,6 @@
-# Prompt 00 — Bootstrap the repository
+# Prompt 01 — Bootstrap the app
 
-This is your opening move. Paste this into Codex first and watch an empty folder turn into a real app — your battlefield gets its first lands.
+Now that the project is cloned and open (see `prompts/00_clone_the_repo.md`), this is where the building starts. Paste this into Codex and watch a folder of plans turn into a real, running app — your battlefield gets its first lands.
 
 ```text
 Goal:

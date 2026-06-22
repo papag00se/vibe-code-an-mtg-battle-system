@@ -1,4 +1,4 @@
-# Prompt 06 — Build combat and first keyword
+# Prompt 07 — Build combat and first keyword
 
 Time to swing. In this step Untap gets simplified combat plus your very first keyword — flying — so creatures can attack, block, and trade blows. Paste the prompt below into Codex and send some creatures into the red zone.
 

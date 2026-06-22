@@ -1,4 +1,4 @@
-# Prompt 05 — Build stack and priority
+# Prompt 06 — Build stack and priority
 
 Now for the heart of Magic: the stack. This is the part that makes players go "ohhh, that's how responses work." You'll give Untap a visual stack and a simple pass-priority dance so spells resolve last-in, first-out. Paste the prompt below into Codex.
 

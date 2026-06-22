@@ -1,4 +1,4 @@
-# Prompt 07 — Polish UX and add resource panel
+# Prompt 08 — Polish UX and add resource panel
 
 Untap works — now let's make it a joy to learn from. This pass sands down the rough edges so a brand-new player can always tell whose turn it is, what's legal, and what just happened, then points them to the official resources for going deeper. Paste the prompt below into Codex.
 

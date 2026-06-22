@@ -1,4 +1,4 @@
-# Prompt 02 — Build card anatomy panel
+# Prompt 03 — Build card anatomy panel
 
 Ever stared at a card and wondered what all those symbols and lines actually mean? This lesson builds the friendly tour guide — a panel that reads a card aloud for you. Paste this into Codex.
 
