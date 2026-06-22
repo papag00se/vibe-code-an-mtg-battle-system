@@ -1,4 +1,4 @@
-# 08 — WotC, Scryfall, and MTGJSON resources
+# 09 — WotC, Scryfall, and MTGJSON resources
 
 Verified for this walkthrough on 2026-06-22.
 

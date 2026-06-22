@@ -1,4 +1,4 @@
-# 03 — Repository setup
+# 04 — Repository setup
 
 ## Target stack
 

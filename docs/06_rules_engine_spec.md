@@ -1,4 +1,4 @@
-# 05 — Rules engine spec
+# 06 — Rules engine spec
 
 ## Design principle
 

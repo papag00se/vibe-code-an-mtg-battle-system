@@ -10,7 +10,7 @@ This teaches multi-step workflows and incremental rule complexity.
 Read first:
 - lessons/09_combat.md
 - lessons/10_keywords.md
-- docs/05_rules_engine_spec.md
+- docs/06_rules_engine_spec.md
 
 Requirements:
 Combat steps:

@@ -9,7 +9,7 @@ This is the first real interactive lesson. It teaches API calls, async/await, JS
 
 Read first:
 - lessons/02_card_search.md
-- docs/08_wotc_scryfall_resources.md
+- docs/09_wotc_scryfall_resources.md
 
 Requirements:
 - Create src/api/scryfall.ts.

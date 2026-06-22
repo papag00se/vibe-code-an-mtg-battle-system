@@ -4,14 +4,21 @@ A repository-ready walkthrough for using Codex to build a free, unofficial Magic
 
 The goal is not to build a commercial game client. The goal is to teach coding through a motivating MTG-shaped project: APIs, React, TypeScript, state machines, game zones, mana, combat, stack resolution, priority, testing, and UX.
 
+## New to AI coding agents?
+
+Start with `docs/02_codex_and_ai_foundations.md`. It explains, in plain language, what an LLM is, what an agent is, what prompts are, and what permission levels (including "YOLO"/full-auto) mean — before you run anything.
+
+Prefer a visual overview? Open `walkthrough.html` in any browser for an at-a-glance map of the whole tutorial.
+
 ## Use this ZIP
 
 1. Create a new empty GitHub repository or local folder.
 2. Copy these Markdown files into the repository root.
 3. Start Codex in the repository.
-4. Begin with `prompts/00_bootstrap_repo.md`.
-5. Keep `AGENTS.md` in the root so Codex inherits the project standards.
-6. Work through the lesson files in order.
+4. Read `docs/02_codex_and_ai_foundations.md` to learn the basics.
+5. Begin with `prompts/00_bootstrap_repo.md`.
+6. Keep `AGENTS.md` in the root so Codex inherits the project standards.
+7. Work through the lesson files in order.
 
 ## Project output
 

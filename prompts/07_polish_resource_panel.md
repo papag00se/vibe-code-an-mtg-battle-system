@@ -9,8 +9,8 @@ This is a UX polish pass. Do not add new rules.
 
 Read first:
 - lessons/12_polish.md
-- docs/06_ui_ux_spec.md
-- docs/08_wotc_scryfall_resources.md
+- docs/07_ui_ux_spec.md
+- docs/09_wotc_scryfall_resources.md
 
 Requirements:
 - Highlight legal actions.

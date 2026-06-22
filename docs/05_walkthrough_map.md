@@ -1,4 +1,4 @@
-# 04 — Walkthrough map
+# 05 — Walkthrough map
 
 ## Phase list
 

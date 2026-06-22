@@ -9,7 +9,7 @@ This lesson teaches arrays, state movement, and domain modeling. The app is stil
 
 Read first:
 - lessons/04_zones.md
-- docs/05_rules_engine_spec.md
+- docs/06_rules_engine_spec.md
 
 Requirements:
 - Create src/game/types.ts.

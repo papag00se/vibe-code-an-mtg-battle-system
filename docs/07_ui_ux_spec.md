@@ -1,4 +1,4 @@
-# 06 — UI/UX spec
+# 07 — UI/UX spec
 
 ## UI goal
 

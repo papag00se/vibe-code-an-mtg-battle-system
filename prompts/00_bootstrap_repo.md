@@ -13,7 +13,7 @@ Read first:
 - AGENTS.md
 - docs/00_project_brief.md
 - docs/01_scope_and_boundaries.md
-- docs/03_repository_setup.md
+- docs/04_repository_setup.md
 
 Constraints:
 Use Vite, React, TypeScript, Vitest, and plain CSS.

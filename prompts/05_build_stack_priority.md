@@ -9,7 +9,7 @@ This lesson teaches LIFO data structures and response windows.
 
 Read first:
 - lessons/08_stack_and_priority.md
-- docs/05_rules_engine_spec.md
+- docs/06_rules_engine_spec.md
 
 Requirements:
 - Create src/game/stack.ts.

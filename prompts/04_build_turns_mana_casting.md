@@ -11,7 +11,7 @@ Read first:
 - lessons/05_turn_phases.md
 - lessons/06_lands_and_mana.md
 - lessons/07_casting_spells.md
-- docs/05_rules_engine_spec.md
+- docs/06_rules_engine_spec.md
 
 Requirements:
 Turn phases:

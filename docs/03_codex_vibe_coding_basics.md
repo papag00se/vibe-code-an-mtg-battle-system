@@ -1,4 +1,6 @@
-# 02 — Codex vibe-coding basics
+# 03 — Codex vibe-coding basics
+
+> New to AI agents, LLMs, prompts, or permission levels? Read `02_codex_and_ai_foundations.md` first.
 
 ## Mental model
 

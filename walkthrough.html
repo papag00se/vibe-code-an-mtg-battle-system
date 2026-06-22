@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stack Tutor — Visual Walkthrough</title>
+<style>
+  :root {
+    --bg: #0f1116;
+    --panel: #171a22;
+    --panel-2: #1e222c;
+    --ink: #e7e9ee;
+    --muted: #9aa3b2;
+    --line: #2a2f3a;
+    --w: #f5f0e1; /* white mana */
+    --u: #4a7bd6; /* blue  */
+    --b: #6f6f7a; /* black */
+    --r: #d24a3a; /* red   */
+    --g: #3a9d57; /* green */
+    --accent: #c9a227; /* gold */
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(1200px 800px at 80% -10%, #1b2030 0%, var(--bg) 60%);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    padding: 64px 0 40px;
+    border-bottom: 1px solid var(--line);
+    background:
+      linear-gradient(180deg, rgba(201,162,39,0.08), transparent 70%);
+  }
+  .mana-row { display: flex; gap: 8px; margin-bottom: 18px; }
+  .pip {
+    width: 26px; height: 26px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 13px; color: #0c0d11;
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.25);
+  }
+  .pip.w { background: var(--w); }
+  .pip.u { background: var(--u); color: #fff; }
+  .pip.b { background: var(--b); color: #fff; }
+  .pip.r { background: var(--r); color: #fff; }
+  .pip.g { background: var(--g); color: #fff; }
+  h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 10px; letter-spacing: -0.02em; }
+  h1 .sub { display:block; font-size: 1rem; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-top: 12px; }
+  .tagline { color: var(--muted); max-width: 64ch; font-size: 1.05rem; }
+  .cta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 11px 18px; border-radius: 10px;
+    font-weight: 600; border: 1px solid var(--line); color: var(--ink);
+    background: var(--panel-2);
+  }
+  .btn.primary { background: var(--accent); color: #1a1606; border-color: transparent; }
+  .btn:hover { text-decoration: none; border-color: var(--accent); }
+
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; color: var(--accent); font-weight: 700; margin: 0 0 6px; }
+  h2 { font-size: 1.7rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .lead { color: var(--muted); max-width: 70ch; margin: 0 0 26px; }
+
+  .grid { display: grid; gap: 16px; }
+  .cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .cols-3 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 760px) { .cols-2, .cols-3 { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 18px 20px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .term { color: var(--ink); font-weight: 600; }
+
+  /* Loop steps */
+  .loop { counter-reset: step; display: grid; gap: 10px; }
+  .loop .step {
+    display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: center;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px;
+  }
+  .loop .step::before {
+    counter-increment: step; content: counter(step);
+    width: 30px; height: 30px; border-radius: 50%;
+    display: grid; place-items: center; font-weight: 700;
+    background: var(--panel-2); color: var(--accent); border: 1px solid var(--line);
+  }
+
+  /* Permission tiers */
+  .tier { border-left: 4px solid var(--line); }
+  .tier.read { border-left-color: var(--g); }
+  .tier.auto { border-left-color: var(--u); }
+  .tier.yolo { border-left-color: var(--r); }
+  .pill { display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:3px 8px; border-radius:999px; margin-left:8px; }
+  .pill.safe { background: rgba(58,157,87,0.15); color: #74d493; }
+  .pill.care { background: rgba(74,123,214,0.15); color: #8fb3f0; }
+  .pill.danger { background: rgba(210,74,58,0.15); color: #f0998f; }
+
+  /* Phase timeline */
+  .phases { display: grid; gap: 12px; }
+  .phase {
+    display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: stretch;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  }
+  .phase .num {
+    display: grid; place-items: center; font-weight: 800; font-size: 1.3rem;
+    background: linear-gradient(180deg, var(--panel-2), var(--panel)); color: var(--accent);
+    border-right: 1px solid var(--line);
+  }
+  .phase .body { padding: 12px 16px; }
+  .phase .feat { font-weight: 600; }
+  .phase .concept { color: var(--muted); font-size: 0.9rem; }
+
+  /* Prompt template */
+  pre {
+    background: #0b0d12; border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 18px; overflow-x: auto; font-size: 0.9rem; color: #d7dbe4;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+  .filelist { columns: 2; gap: 24px; }
+  @media (max-width: 600px) { .filelist { columns: 1; } }
+  .filelist a { display: block; padding: 6px 0; color: var(--ink); border-bottom: 1px dashed var(--line); }
+  .filelist a code { color: var(--accent); }
+
+  footer { padding: 40px 0 70px; color: var(--muted); font-size: 0.85rem; }
+  footer .notice { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="mana-row" aria-hidden="true">
+      <span class="pip w">W</span><span class="pip u">U</span><span class="pip b">B</span><span class="pip r">R</span><span class="pip g">G</span>
+    </div>
+    <h1>Stack Tutor
+      <span class="sub">A Magic-rules coding lab you build with Codex — one small prompt at a time.</span>
+    </h1>
+    <p class="tagline">Learn real software engineering — APIs, TypeScript, React state, state machines, the stack, combat, and testing — by building a free, unofficial Magic: The Gathering rules sandbox. This page is the visual map of the whole walkthrough.</p>
+    <div class="cta">
+      <a class="btn primary" href="docs/02_codex_and_ai_foundations.md">Start with the basics →</a>
+      <a class="btn" href="prompts/00_bootstrap_repo.md">First Codex prompt</a>
+      <a class="btn" href="README.md">README</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- FOUNDATIONS -->
+  <section id="foundations">
+    <div class="wrap">
+      <p class="eyebrow">Step 0 — Before you prompt</p>
+      <h2>The words you need first</h2>
+      <p class="lead">If you have never used an AI coding agent, learn this vocabulary before running anything. Full detail lives in <a href="docs/02_codex_and_ai_foundations.md"><code>docs/02_codex_and_ai_foundations.md</code></a>.</p>
+      <div class="grid cols-3">
+        <div class="card"><h3>LLM</h3><p>A <span class="term">large language model</span> — the engine that predicts useful next text. It powers everything Codex does.</p></div>
+        <div class="card"><h3>Inference</h3><p>One run of that engine: text in, text out. Every time Codex "thinks," it runs inference.</p></div>
+        <div class="card"><h3>Prompt</h3><p>Your instructions. Specific beats vague. Prompts are your main lever of control.</p></div>
+        <div class="card"><h3>Agent</h3><p>An LLM that can also <span class="term">act</span> — read files, edit code, run commands — not just chat.</p></div>
+        <div class="card"><h3>Codex</h3><p>The coding agent you steer here. It reads your repo and proposes changes in a loop.</p></div>
+        <div class="card"><h3>Context</h3><p>Everything the model can currently see: your prompt, the files it read, and the recent conversation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE LOOP -->
+  <section id="loop">
+    <div class="wrap">
+      <p class="eyebrow">How you work</p>
+      <h2>The vibe-coding loop</h2>
+      <p class="lead">You drive in short turns. Small request, review, steer again. You are the senior engineer; Codex is the fast junior.</p>
+      <div class="loop">
+        <div class="step">Give one small, specific goal.</div>
+        <div class="step">Provide context and constraints.</div>
+        <div class="step">Let Codex implement.</div>
+        <div class="step">Inspect the diff — read what changed.</div>
+        <div class="step">Run the app and the tests yourself.</div>
+        <div class="step">Ask Codex to explain its change.</div>
+        <div class="step">Request the next small improvement. Repeat.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERMISSIONS -->
+  <section id="permissions">
+    <div class="wrap">
+      <p class="eyebrow">Guardrails</p>
+      <h2>Permission levels (including "YOLO")</h2>
+      <p class="lead">An agent that can run commands needs limits. Names vary by version, but they fall into three tiers. <strong>For this tutorial, start strict.</strong></p>
+      <div class="grid cols-3">
+        <div class="card tier read">
+          <h3>Read-only / suggest <span class="pill safe">start here</span></h3>
+          <p>Codex proposes edits and commands, but you approve each action. Best for learning and unfamiliar code.</p>
+        </div>
+        <div class="card tier auto">
+          <h3>Auto-edit <span class="pill care">with care</span></h3>
+          <p>Codex edits files on its own but asks before running commands. Fine once you trust the task.</p>
+        </div>
+        <div class="card tier yolo">
+          <h3>Full-auto "YOLO" <span class="pill danger">danger</span></h3>
+          <p>No approval prompts — reads, edits, and runs commands freely. Only on committed, reversible, sandboxed work.</p>
+        </div>
+      </div>
+      <pre>Rule of thumb:
+If you would not let a brand-new intern run that command
+unsupervised on your laptop, do not let an agent do it
+in full-auto either.</pre>
+    </div>
+  </section>
+
+  <!-- PHASES -->
+  <section id="phases">
+    <div class="wrap">
+      <p class="eyebrow">The build</p>
+      <h2>What you build, in order</h2>
+      <p class="lead">Each phase teaches one coding concept through one Magic feature. Do not skip ahead to combat or the stack — the progression is the point. Full map: <a href="docs/05_walkthrough_map.md"><code>docs/05_walkthrough_map.md</code></a>.</p>
+      <div class="phases">
+        <div class="phase"><div class="num">0</div><div class="body"><div class="feat">Bootstrap app</div><div class="concept">Repo setup, the Codex workflow</div></div></div>
+        <div class="phase"><div class="num">1</div><div class="body"><div class="feat">Card search</div><div class="concept">API calls, JSON, loading &amp; error states</div></div></div>
+        <div class="phase"><div class="num">2</div><div class="body"><div class="feat">Card anatomy</div><div class="concept">TypeScript models, conditional rendering</div></div></div>
+        <div class="phase"><div class="num">3</div><div class="body"><div class="feat">Zones</div><div class="concept">Arrays, object movement, state modeling</div></div></div>
+        <div class="phase"><div class="num">4</div><div class="body"><div class="feat">Start game</div><div class="concept">Deterministic setup, draw seven</div></div></div>
+        <div class="phase"><div class="num">5</div><div class="body"><div class="feat">Turn phases</div><div class="concept">State machines</div></div></div>
+        <div class="phase"><div class="num">6</div><div class="body"><div class="feat">Lands &amp; mana</div><div class="concept">Resources, validation</div></div></div>
+        <div class="phase"><div class="num">7</div><div class="body"><div class="feat">Casting spells</div><div class="concept">Legal actions, cost parsing</div></div></div>
+        <div class="phase"><div class="num">8</div><div class="body"><div class="feat">Stack &amp; priority</div><div class="concept">LIFO, response windows</div></div></div>
+        <div class="phase"><div class="num">9</div><div class="body"><div class="feat">Combat</div><div class="concept">Multi-step workflows, damage assignment</div></div></div>
+        <div class="phase"><div class="num">10</div><div class="body"><div class="feat">Keywords</div><div class="concept">Incremental complexity</div></div></div>
+        <div class="phase"><div class="num">11</div><div class="body"><div class="feat">Tests</div><div class="concept">Pure-function verification</div></div></div>
+        <div class="phase"><div class="num">12</div><div class="body"><div class="feat">UX polish</div><div class="concept">Clarity, event log, legal-action hints</div></div></div>
+        <div class="phase"><div class="num">13</div><div class="body"><div class="feat">Resource panel</div><div class="concept">Official references, learning support</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMPT PATTERN -->
+  <section id="pattern">
+    <div class="wrap">
+      <p class="eyebrow">Your template</p>
+      <h2>The four-part prompt</h2>
+      <p class="lead">Reuse this shape for every feature. State the goal, the context, the constraints, and what "done" looks like.</p>
+      <pre>Goal:
+[One specific feature]
+
+Context:
+[Relevant project / files / design intent]
+
+Constraints:
+[Tech, scope, style, legal/IP, testing]
+
+Done when:
+[Observable completion criteria]</pre>
+    </div>
+  </section>
+
+  <!-- FILE MAP -->
+  <section id="files">
+    <div class="wrap">
+      <p class="eyebrow">Reference</p>
+      <h2>Every file in this walkthrough</h2>
+      <p class="lead">Docs explain the design. Lessons are the spine — work through them in order. Prompts are ready to paste into Codex.</p>
+
+      <h3 style="color:var(--accent);margin-top:8px">Docs</h3>
+      <div class="filelist">
+        <a href="docs/00_project_brief.md"><code>00</code> Project brief</a>
+        <a href="docs/01_scope_and_boundaries.md"><code>01</code> Scope and boundaries</a>
+        <a href="docs/02_codex_and_ai_foundations.md"><code>02</code> Codex &amp; AI foundations</a>
+        <a href="docs/03_codex_vibe_coding_basics.md"><code>03</code> Codex vibe-coding basics</a>
+        <a href="docs/04_repository_setup.md"><code>04</code> Repository setup</a>
+        <a href="docs/05_walkthrough_map.md"><code>05</code> Walkthrough map</a>
+        <a href="docs/06_rules_engine_spec.md"><code>06</code> Rules engine spec</a>
+        <a href="docs/07_ui_ux_spec.md"><code>07</code> UI/UX spec</a>
+        <a href="docs/08_testing_plan.md"><code>08</code> Testing plan</a>
+        <a href="docs/09_wotc_scryfall_resources.md"><code>09</code> WotC &amp; Scryfall resources</a>
+        <a href="docs/10_backlog_and_extensions.md"><code>10</code> Backlog and extensions</a>
+      </div>
+
+      <h3 style="color:var(--accent);margin-top:22px">Lessons</h3>
+      <div class="filelist">
+        <a href="lessons/00_lesson_index.md"><code>00</code> Lesson index</a>
+        <a href="lessons/01_bootstrap.md"><code>01</code> Bootstrap</a>
+        <a href="lessons/02_card_search.md"><code>02</code> Card search</a>
+        <a href="lessons/03_card_anatomy.md"><code>03</code> Card anatomy</a>
+        <a href="lessons/04_zones.md"><code>04</code> Zones</a>
+        <a href="lessons/05_turn_phases.md"><code>05</code> Turn phases</a>
+        <a href="lessons/06_lands_and_mana.md"><code>06</code> Lands and mana</a>
+        <a href="lessons/07_casting_spells.md"><code>07</code> Casting spells</a>
+        <a href="lessons/08_stack_and_priority.md"><code>08</code> Stack and priority</a>
+        <a href="lessons/09_combat.md"><code>09</code> Combat</a>
+        <a href="lessons/10_keywords.md"><code>10</code> Keywords</a>
+        <a href="lessons/11_testing.md"><code>11</code> Testing</a>
+        <a href="lessons/12_polish.md"><code>12</code> Polish</a>
+      </div>
+
+      <h3 style="color:var(--accent);margin-top:22px">Prompts</h3>
+      <div class="filelist">
+        <a href="prompts/00_bootstrap_repo.md"><code>00</code> Bootstrap repo</a>
+        <a href="prompts/01_build_card_search.md"><code>01</code> Build card search</a>
+        <a href="prompts/02_build_card_anatomy.md"><code>02</code> Build card anatomy</a>
+        <a href="prompts/03_build_zones_and_state.md"><code>03</code> Build zones and state</a>
+        <a href="prompts/04_build_turns_mana_casting.md"><code>04</code> Build turns, mana, casting</a>
+        <a href="prompts/05_build_stack_priority.md"><code>05</code> Build stack and priority</a>
+        <a href="prompts/06_build_combat_keywords.md"><code>06</code> Build combat and keywords</a>
+        <a href="prompts/07_polish_resource_panel.md"><code>07</code> Polish and resource panel</a>
+        <a href="prompts/99_review_and_refactor.md"><code>99</code> Review and refactor</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="notice">
+      Stack Tutor is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. © Wizards of the Coast LLC.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

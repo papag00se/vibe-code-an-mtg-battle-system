@@ -2,16 +2,18 @@
 
 - `AGENTS.md`
 - `README.md`
+- `walkthrough.html`
 - `docs/00_project_brief.md`
 - `docs/01_scope_and_boundaries.md`
-- `docs/02_codex_vibe_coding_basics.md`
-- `docs/03_repository_setup.md`
-- `docs/04_walkthrough_map.md`
-- `docs/05_rules_engine_spec.md`
-- `docs/06_ui_ux_spec.md`
-- `docs/07_testing_plan.md`
-- `docs/08_wotc_scryfall_resources.md`
-- `docs/09_backlog_and_extensions.md`
+- `docs/02_codex_and_ai_foundations.md`
+- `docs/03_codex_vibe_coding_basics.md`
+- `docs/04_repository_setup.md`
+- `docs/05_walkthrough_map.md`
+- `docs/06_rules_engine_spec.md`
+- `docs/07_ui_ux_spec.md`
+- `docs/08_testing_plan.md`
+- `docs/09_wotc_scryfall_resources.md`
+- `docs/10_backlog_and_extensions.md`
 - `lessons/00_lesson_index.md`
 - `lessons/01_bootstrap.md`
 - `lessons/02_card_search.md`
