@@ -10,17 +10,28 @@ No computer science degree required. If you can describe what you want, you can 
 
 Start with [`docs/02_codex_and_ai_foundations.md`](docs/02_codex_and_ai_foundations.md). In plain language it explains what an LLM is, what an "agent" actually does, how prompts steer it, and what permission levels (including the spicy full-auto "YOLO" mode) really mean — before you run a single command.
 
-Want the big picture first? Open the live visual map at **https://papag00se.github.io/stack-tutor-codex-walkthrough/**, or open `walkthrough.html` locally in any browser.
+Want the big picture first? Open the live visual map at **https://papag00se.github.io/vibe-code-an-mtg-battle-system/**, or open `walkthrough.html` locally in any browser.
 
 ## How to use this
 
-1. Create a new empty GitHub repository or local folder.
-2. Copy these Markdown files into the repository root.
-3. Start Codex in the repository.
-4. Read [`docs/02_codex_and_ai_foundations.md`](docs/02_codex_and_ai_foundations.md) to get your bearings.
-5. Make your first move: open `prompts/00_bootstrap_repo.md` and paste it into Codex.
-6. Keep `AGENTS.md` in the root — it's the house rulebook Codex reads on every turn.
-7. Work through the lessons in order. Resist the urge to skip to combat. (We know. We get it. Still: in order.)
+1. Get the project onto your machine. The easiest way? Don't even do it yourself — ask your AI agent to grab it for you:
+
+   ```text
+   Clone https://github.com/papag00se/vibe-code-an-mtg-battle-system and open it so we can start building.
+   ```
+
+   Prefer to do it by hand? Same thing, in a terminal:
+
+   ```bash
+   git clone https://github.com/papag00se/vibe-code-an-mtg-battle-system.git
+   cd vibe-code-an-mtg-battle-system
+   ```
+
+2. Start Codex in the project folder.
+3. Read [`docs/02_codex_and_ai_foundations.md`](docs/02_codex_and_ai_foundations.md) to get your bearings.
+4. Make your first move: open `prompts/00_bootstrap_repo.md` and paste it into Codex.
+5. Keep `AGENTS.md` in the root — it's the house rulebook Codex reads on every turn.
+6. Work through the lessons in order. Resist the urge to skip to combat. (We know. We get it. Still: in order.)
 
 ## What you'll build
 
