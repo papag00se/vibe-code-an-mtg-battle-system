@@ -2,6 +2,7 @@
 
 - `AGENTS.md`
 - `README.md`
+- `index.html`
 - `walkthrough.html`
 - `docs/00_project_brief.md`
 - `docs/01_scope_and_boundaries.md`

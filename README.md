@@ -8,7 +8,7 @@ The goal is not to build a commercial game client. The goal is to teach coding t
 
 Start with `docs/02_codex_and_ai_foundations.md`. It explains, in plain language, what an LLM is, what an agent is, what prompts are, and what permission levels (including "YOLO"/full-auto) mean — before you run anything.
 
-Prefer a visual overview? Open `walkthrough.html` in any browser for an at-a-glance map of the whole tutorial.
+Prefer a visual overview? View the live walkthrough at **https://papag00se.github.io/stack-tutor-codex-walkthrough/**, or open `walkthrough.html` locally in any browser.
 
 ## Use this ZIP
 

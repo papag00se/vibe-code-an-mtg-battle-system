@@ -1,0 +1,5 @@
+Add index.html redirect and GitHub Pages URL
+
+- index.html redirects the Pages site root to walkthrough.html
+- README links the live GitHub Pages URL
+- MANIFEST lists index.html
