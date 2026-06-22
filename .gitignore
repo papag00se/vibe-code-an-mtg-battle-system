@@ -1,0 +1,3 @@
+# Temp files used by tooling/automation
+.cmsg.tmp
+_*.sh
