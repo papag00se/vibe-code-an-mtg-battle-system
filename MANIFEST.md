@@ -4,6 +4,7 @@
 - `README.md`
 - `index.html`
 - `walkthrough.html`
+- `viewer.html`
 - `docs/00_project_brief.md`
 - `docs/01_scope_and_boundaries.md`
 - `docs/02_codex_and_ai_foundations.md`
