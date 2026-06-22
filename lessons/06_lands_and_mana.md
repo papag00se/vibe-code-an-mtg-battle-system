@@ -1,5 +1,7 @@
 # Lesson 6 — Lands and mana
 
+Mana is the fuel of Magic — no lands, no spells. In this lesson you'll teach Untap to recognize land cards, let a player drop one land per turn, and tap it for mana that fills up a mana pool. You'll also enforce your first real rule: no sneaking in a second land. Resource systems and "is this move legal?" checks are everywhere in games, and you're about to build one.
+
 ## Teaches
 
 - resource systems
@@ -36,14 +38,19 @@ Mana clears at phase changes.
 
 ## Manual test
 
-- Move a land to hand.
+Run a land through its whole job and then try to break the rules:
+
+- Move a land to your hand.
 - Play it during first main.
 - Tap it for mana.
-- Advance phase.
-- Confirm mana clears.
-- Try to play a second land in the same turn.
+- Advance a phase and confirm the mana pool clears.
+- Now try to play a second land in the same turn — and enjoy getting politely told no.
+
+That blocked second land is your validation working exactly as intended.
 
 ## Ask Codex after implementation
+
+You just wrote game rules in code. Ask Codex how it pulled that off:
 
 ```text
 Explain how the app enforces one land per turn and why mana clears between phases in this simplified model.

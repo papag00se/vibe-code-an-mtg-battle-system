@@ -1,8 +1,10 @@
 # 07 — UI/UX spec
 
+This is where Untap stops being abstract and starts being a place you actually want to play. The whole job of the interface is to make Magic's invisible rules visible — so a beginner can *see* the game thinking.
+
 ## UI goal
 
-Make rules visible. The user should always know:
+Make rules visible. At any moment, you should always know:
 
 - whose turn it is
 - current phase
@@ -16,7 +18,7 @@ Make rules visible. The user should always know:
 
 ```text
 +---------------------------------------------------+
-| Header: Stack Tutor / turn / phase / priority     |
+| Header: Untap / turn / phase / priority           |
 +---------------------------------------------------+
 | Opponent hand/library/graveyard/life              |
 | Opponent battlefield                              |
@@ -32,6 +34,8 @@ Make rules visible. The user should always know:
 ```
 
 ## Components
+
+Here are the building blocks. Each one does a small job well — wire them together and Untap takes shape.
 
 ### AppShell
 
@@ -83,6 +87,8 @@ Links to official WotC resources and Scryfall docs.
 
 ## UX rules
 
+These are the little kindnesses that keep a beginner oriented instead of lost:
+
 - Disable buttons for illegal actions.
 - When an action is disabled, provide a short reason.
 - Highlight legal actions.
@@ -107,7 +113,7 @@ Opt resolved and moved to graveyard.
 
 ## Beginner affordances
 
-Every lesson screen should include:
+Never leave the learner guessing. Every lesson screen should answer four simple questions:
 
 - what this teaches
 - what to click
@@ -115,6 +121,8 @@ Every lesson screen should include:
 - what code concept it maps to
 
 ## Visual style
+
+Aim for "cozy game table at midnight," and stay clearly unofficial:
 
 - Clean dark tabletop style.
 - Avoid WotC logos and official branding.

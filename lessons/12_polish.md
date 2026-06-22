@@ -1,17 +1,19 @@
 # Lesson 12 — UX polish and resource panel
 
-## Teaches
+You made it to the finish line — and what a build it's been. Untap *works*, but this is where it goes from "my project" to "something a stranger could pick up and learn from." Clear labels, helpful nudges, a tidy resource panel pointing to the real rules. This is the lesson that makes all your hard work shine. Let's polish it up.
 
-- user guidance
-- affordances
-- educational UI
-- links to primary resources
+## What you'll teach Untap
+
+- guiding the player so they're never lost
+- affordances — making it obvious what you can click
+- a UI that teaches as you go
+- links out to the primary, official resources
 
 ## Codex prompt
 
 ```text
 Goal:
-Make Stack Tutor easier to learn from.
+Make Untap easier to learn from.
 
 Requirements:
 - Highlight legal actions.
@@ -46,9 +48,9 @@ Done when:
 A new player can understand whose turn it is, what phase it is, who has priority, what they can click, and what just happened.
 ```
 
-## Manual test
+## Try it yourself
 
-Run through:
+Take a victory lap through the whole thing, start to finish:
 
 - card search
 - play land
@@ -60,4 +62,4 @@ Run through:
 - declare blockers
 - resolve combat
 
-Confirm the event log and UI explain the flow.
+Confirm the event log and UI explain the flow clearly enough that a newcomer could follow along. If they can, you've built something genuinely teaching-worthy. Nicely done.

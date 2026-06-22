@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Stack Tutor — Reader</title>
+<title>Reader — Build an MtG Battle System with AI!</title>
 <style>
   :root {
     --bg: #0f1116; --panel: #171a22; --panel-2: #1e222c;
@@ -70,7 +70,7 @@
 <body>
   <div class="topbar">
     <div class="left">
-      <a class="brand" href="walkthrough.html">⟵ Stack Tutor</a>
+      <a class="brand" href="walkthrough.html">⟵ Build an MtG Battle System</a>
       <span class="crumb" id="crumb"></span>
     </div>
     <a class="btn" id="rawlink" href="#" target="_blank" rel="noopener">View raw .md</a>
@@ -128,11 +128,11 @@
       if (!isAllowed(doc)) {
         showError('<strong>No document selected.</strong><br>Go back to the ' +
           '<a href="walkthrough.html">visual walkthrough</a> and pick a file.');
-        document.title = 'Stack Tutor — Reader';
+        document.title = 'Reader — Build an MtG Battle System with AI!';
       } else {
         crumb.textContent = doc;
         rawlink.href = doc;
-        document.title = doc + ' — Stack Tutor';
+        document.title = doc + ' — Build an MtG Battle System with AI!';
         var baseDir = doc.indexOf('/') !== -1 ? doc.slice(0, doc.lastIndexOf('/') + 1) : '';
 
         fetch(doc, { cache: 'no-cache' })

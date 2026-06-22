@@ -1,11 +1,13 @@
 # Lesson 7 — Casting spells
 
-## Teaches
+This is the big one. Up to now you've been shuffling cards between zones — now you get to actually *cast* them. By the end of this lesson, Untap will let you tap lands, pay a cost, and watch a spell do its thing. That little jolt when your first creature lands on the battlefield? Enjoy it. You earned it.
 
-- legal actions
-- cost checks
-- spell resolution
-- permanent vs instant/sorcery movement
+## What you'll teach Untap
+
+- which actions are legal, and when
+- checking you can actually afford a spell
+- how a spell resolves
+- where it goes afterward (permanents stay; instants and sorceries take a bow and head to the graveyard)
 
 ## Codex prompt
 
@@ -34,14 +36,16 @@ The user can cast an instant and resolve it to the graveyard.
 Casting without enough mana fails with a clear reason.
 ```
 
-## Manual test
+## Try it yourself
 
-- Play/tap lands.
+Don't take Codex's word for it — go play with it:
+
+- Play and tap some lands.
 - Cast a creature.
 - Resolve it.
 - Cast an instant.
 - Resolve it.
-- Try casting without enough mana.
+- Try casting without enough mana, and check that it tells you why.
 
 ## Ask Codex after implementation
 

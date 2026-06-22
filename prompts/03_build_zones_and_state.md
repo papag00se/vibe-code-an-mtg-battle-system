@@ -1,5 +1,7 @@
 # Prompt 03 — Build zones and game state
 
+Now we lay down the bones of a real game. Library, hand, battlefield, graveyard — and yes, the stack. Cards start to *move*, and Untap begins to feel alive. Paste this into Codex.
+
 ```text
 Goal:
 Add Magic-inspired zones and core game-state types.

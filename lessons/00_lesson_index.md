@@ -1,6 +1,6 @@
 # Lesson index
 
-Work through these in order.
+Your build path for Untap, start to finish. Work through these in order — each one adds a piece, and the order is the secret sauce. Don't skip ahead to combat or the stack (we know it's tempting); the earlier lessons are what make the later ones click.
 
 | Lesson | File | Feature |
 |---:|---|---|

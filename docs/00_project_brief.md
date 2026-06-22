@@ -3,16 +3,17 @@
 ## Name
 
 ```text
-Stack Tutor: A Magic Rules Coding Lab
+Tutorial:  Build an MtG Battle System with AI!
+The app:   Untap
 ```
 
 ## One-line description
 
-A free, unofficial MTG rules-learning app that teaches vibe coding through card search, zones, turn phases, mana, combat, stack resolution, priority, and tests.
+Untap is a free, unofficial MtG rules-learning app you build with an AI agent — picking up real coding skills through card search, zones, turn phases, mana, combat, stack resolution, priority, and tests along the way.
 
 ## Audience
 
-A Magic: The Gathering player who wants to learn vibe coding with Codex and likes rules systems.
+A Magic: The Gathering player who's curious about coding, likes how rules systems click together, and wants to build something real with Codex. Total beginners welcome.
 
 ## Educational goal
 

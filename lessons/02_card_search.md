@@ -1,5 +1,7 @@
 # Lesson 2 — Scryfall card search
 
+Now for the fun part: real cards. In this lesson you'll wire Untap up to Scryfall — the giant free Magic card database — so you can type a card name and watch the actual card appear. This is your first time talking to the internet from your app, and it's a genuinely magical moment. Let's go fetch some cards.
+
 ## Teaches
 
 - API calls
@@ -40,6 +42,8 @@ Typing nonsense shows a useful error.
 
 ## Suggested API function shape
 
+Here's a shape to point Codex toward if it needs a nudge. Don't sweat understanding every line yet — you'll ask Codex to explain it in a minute:
+
 ```ts
 export async function getCardByName(name: string): Promise<ScryfallCard> {
   const params = new URLSearchParams({ fuzzy: name });
@@ -55,7 +59,7 @@ export async function getCardByName(name: string): Promise<ScryfallCard> {
 
 ## Manual test
 
-Search:
+Take it for a spin. Search a few of these and watch the cards roll in:
 
 ```text
 Lightning Bolt
@@ -64,7 +68,11 @@ Counterspell
 Island
 ```
 
+Then try typing pure nonsense and make sure you get a friendly error instead of a crash. Handling the "oops" case gracefully is what separates a toy from real software.
+
 ## Ask Codex after implementation
+
+That fetch did a lot of work in a few lines. Ask Codex to walk you through it:
 
 ```text
 Explain how this API call works. Explain async/await, fetch, URLSearchParams, JSON, and React state like I am new to coding.

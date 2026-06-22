@@ -1,11 +1,13 @@
 # Lesson 9 — Combat
 
-## Teaches
+This is the part you've been itching to build (we saw you eyeing it). Attacking, blocking, creatures trading blows — combat is where Magic gets loud. It's also a tidy little multi-step workflow, which makes it a great thing to teach a computer. We'll keep it simplified for now and add the fancy stuff later. One step at a time.
 
-- multi-step workflows
-- attack/block state
-- damage calculation
-- lethal damage
+## What you'll teach Untap
+
+- a workflow that moves through clear steps
+- tracking who's attacking and who's blocking
+- working out how much damage lands
+- when damage is lethal and a creature goes to the graveyard
 
 ## Codex prompt
 
@@ -39,15 +41,17 @@ Done when:
 The user can run through a complete combat step with clear event-log messages.
 ```
 
-## Manual test
+## Try it yourself
 
-- Put two creatures on Player A battlefield.
-- Put one creature on Player B battlefield.
+Stage a little skirmish and see how it plays out:
+
+- Put two creatures on Player A's battlefield.
+- Put one creature on Player B's battlefield.
 - Enter combat.
 - Attack with one creature.
 - Block with one creature.
 - Resolve damage.
-- Confirm death/life changes as appropriate.
+- Confirm the deaths and life changes land the way you'd expect.
 
 ## Ask Codex after implementation
 

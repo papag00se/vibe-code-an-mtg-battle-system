@@ -1,10 +1,14 @@
 # 01 — Scope and boundaries
 
+Let's set the table before you build. Knowing where the lines are keeps this project fun, legal, and respectful of the game we love. None of this is scary — it just keeps you in the safe zone.
+
 ## Working interpretation
 
-A free, educational vibe-coding tutorial that uses MTG as the learning context is the intended scope. The app should be treated as unofficial fan content and a rules-learning lab, not a marketable game client.
+Here's the deal: Untap is a free, educational vibe-coding tutorial that uses Magic as its learning context. Think of it as unofficial fan content and a rules-learning lab — not a marketable game client. You're learning to code with Magic as your playground, and that's exactly the right framing.
 
 ## Safer uses
+
+These are all squarely in-bounds — build with confidence:
 
 - local-only tutorial project
 - free web learning demo
@@ -20,6 +24,8 @@ A free, educational vibe-coding tutorial that uses MTG as the learning context i
 
 ## Riskier uses
 
+These cross the line — steer clear of all of them:
+
 - paid product
 - access requiring payment, subscription, survey, or email registration
 - app branding using WotC logos/trademarks
@@ -33,21 +39,21 @@ A free, educational vibe-coding tutorial that uses MTG as the learning context i
 
 ## Footer notice
 
-Use this in the app footer:
+Drop this in the app footer, word for word — this is the standard Fan Content wording, so don't paraphrase it:
 
 ```text
-Stack Tutor is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. © Wizards of the Coast LLC.
+Untap is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. © Wizards of the Coast LLC.
 ```
 
 ## App framing copy
 
-Use copy like this:
+Aim for copy like this — clear about what Untap is:
 
 ```text
 Learn coding through Magic rules concepts. Search cards, visualize zones, step through phases, and watch the stack resolve.
 ```
 
-Avoid copy like this:
+Steer away from copy like this — it overpromises and implies you're a game client:
 
 ```text
 Play full Magic online for free.
@@ -55,9 +61,9 @@ Play full Magic online for free.
 
 ## Naming
 
-Acceptable:
+The app you're building is named **Untap**. If you ever spin off your own variation, these kinds of names stay safe:
 
-- Stack Tutor
+- Untap
 - Rules Lab
 - Mana Sandbox
 - Priority Trainer
@@ -69,6 +75,8 @@ Avoid:
 - names confusingly close to Arena, Magic Online, SpellTable, or Wizards services
 
 ## Data handling
+
+Play nice with Scryfall and you'll be fine:
 
 - Use Scryfall API calls at runtime.
 - Do not download all card images.

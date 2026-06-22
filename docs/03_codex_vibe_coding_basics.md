@@ -4,9 +4,9 @@
 
 ## Mental model
 
-Codex is not just a text generator. Treat it like a junior coding agent that can inspect the repo, make changes, run checks, and explain its work.
+Codex is not just a text generator. Treat it like an eager junior coding agent that can inspect the repo, make changes, run checks, and explain its work — fast and tireless, but it needs you steering.
 
-The learner's job is to steer, review, test, and narrow scope.
+Your job is the fun part: steer, review, test, and keep the scope tight.
 
 ## The loop
 
@@ -40,6 +40,8 @@ Done when:
 
 ## Good prompting habits
 
+These are the habits that keep your runs smooth:
+
 - One feature per prompt.
 - Use concrete examples.
 - Tell Codex what not to do.
@@ -49,6 +51,8 @@ Done when:
 - Do not accept code without running it.
 
 ## Bad prompting habits
+
+These are the vague mana-sinks that send Codex off the rails. Don't do these:
 
 ```text
 Build the whole game.

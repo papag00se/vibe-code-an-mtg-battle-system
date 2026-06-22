@@ -1,5 +1,7 @@
 # Lesson 5 — Turn phases
 
+A Magic turn isn't one big blob — it marches through phases in a strict order, every single time. Untap and draw, play your stuff, swing in combat, wrap up. In this lesson you'll teach the app that rhythm with a "Next Phase" button and hand the turn off between two players. Programmers call this pattern a state machine, and once it clicks, you'll see it everywhere.
+
 ## Teaches
 
 - state machines
@@ -8,6 +10,8 @@
 - turn structure
 
 ## Phase model
+
+Here's the loop you're building. Notice how it wraps back around to the next player at the end:
 
 ```text
 beginning -> firstMain -> combat -> secondMain -> end -> next player's beginning
@@ -47,13 +51,17 @@ The app advances through phases and passes the turn between two players.
 
 ## Manual test
 
-Click through a full turn cycle and confirm:
+Hit "Next Phase" over and over through a full turn cycle and confirm:
 
-- phase order is correct
-- active player changes after end phase
-- event log is understandable
+- the phase order is correct
+- the active player changes after the end phase
+- the event log reads clearly
+
+When the turn cleanly hands off to player two and starts over, you've built your first state machine.
 
 ## Ask Codex after implementation
+
+Want to see the magic behind the button? Ask Codex to show you where the rules actually live:
 
 ```text
 Explain why turn phases are a state machine. Show me where the valid transitions are encoded.

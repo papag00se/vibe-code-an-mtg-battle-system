@@ -1,6 +1,10 @@
 # 10 — Backlog and extensions
 
+Finished the core build? Nice work. This is your wish list — a pile of fun directions to take Untap once the basics are solid. Pick whatever excites you; each one teaches something new.
+
 ## Near-term extensions
+
+These are close at hand — natural next steps once the main loop feels good.
 
 ### Deck import
 
@@ -61,6 +65,8 @@ Teach:
 
 ## Medium-term extensions
 
+A little more ambitious — worth it once you're comfortable steering Codex.
+
 ### Goldfish mode
 
 One player plays through turns without an opponent.
@@ -115,6 +121,8 @@ Each keyword gets:
 
 ## Advanced extensions
 
+Boss-level stuff. Save these for when you're feeling brave and the fundamentals are second nature.
+
 ### Commander deck viewer
 
 Only as a deck-analysis/reference tool, not gameplay.
@@ -155,6 +163,8 @@ Teach:
 - hallucination boundaries
 
 ## Keep avoiding
+
+No matter how far you take Untap, stay in your lane — it keeps the project free, legal, and respectful of Wizards of the Coast:
 
 - public matchmaking
 - paid gameplay

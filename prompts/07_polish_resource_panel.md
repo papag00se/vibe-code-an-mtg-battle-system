@@ -1,8 +1,10 @@
 # Prompt 07 — Polish UX and add resource panel
 
+Untap works — now let's make it a joy to learn from. This pass sands down the rough edges so a brand-new player can always tell whose turn it is, what's legal, and what just happened, then points them to the official resources for going deeper. Paste the prompt below into Codex.
+
 ```text
 Goal:
-Make Stack Tutor easier to learn from and add official resource links.
+Make Untap easier to learn from and add official resource links.
 
 Context:
 This is a UX polish pass. Do not add new rules.

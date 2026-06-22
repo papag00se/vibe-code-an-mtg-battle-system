@@ -1,5 +1,7 @@
 # 09 — WotC, Scryfall, and MTGJSON resources
 
+These are your trusted sources — the official rules, the card data, the legal boundaries. Bookmark them. When a rules question comes up (and it will), this is where you and Codex go to settle it instead of guessing.
+
 Verified for this walkthrough on 2026-06-22.
 
 ## WotC resources
@@ -108,6 +110,8 @@ Use for:
 
 ## Scryfall resources
 
+Scryfall is the friendly card database that powers Untap's search. It's fast, free, and beginner-friendly — your best friend for this whole build.
+
 ### Scryfall API
 
 URL: https://scryfall.com/docs/api
@@ -166,8 +170,8 @@ Do not use in the first tutorial unless the learner outgrows Scryfall API calls.
 
 ## Resource panel copy
 
-Use this inside the app:
+Drop this straight into the app's resource panel:
 
 ```text
-Stack Tutor links to official Magic learning resources and Scryfall card data so you can learn both coding and rules concepts. This app is unofficial and educational.
+Untap links to official Magic learning resources and Scryfall card data so you can learn both coding and rules concepts. This app is unofficial and educational.
 ```

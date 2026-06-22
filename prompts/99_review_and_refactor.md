@@ -1,6 +1,6 @@
 # Prompt 99 — Review and refactor pass
 
-Use this after each major milestone.
+Every good deck gets a tune-up between rounds. Run this after each major milestone to let Codex tidy up the build, catch rough edges, and keep Untap readable before you move on. No new features — just a clean, healthy codebase.
 
 ```text
 Goal:

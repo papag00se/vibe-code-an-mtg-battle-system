@@ -1,5 +1,7 @@
 # Prompt 01 — Build Scryfall card search
 
+Time for your first real spell. This is where Untap stops being a placeholder and starts pulling actual Magic cards out of thin air — type a name, get the card. Paste this into Codex.
+
 ```text
 Goal:
 Add a Magic card search screen using the Scryfall API.

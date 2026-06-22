@@ -1,11 +1,13 @@
 # Lesson 11 — Testing the rules engine
 
-## Teaches
+Tests might sound like the boring vegetables of coding, but stick with us — they're actually a superpower. Once Untap has a solid set of tests, you can ask Codex to change things and *know* you didn't quietly break the stack or combat. Tests turn "I hope this still works" into "I'm sure it does." That confidence is worth a lot, especially when you're learning.
 
-- test-driven confidence
-- pure functions
-- deterministic fixtures
-- AI code review discipline
+## What you'll teach Untap
+
+- confidence that comes from tests, not crossed fingers
+- pure functions that are easy to check
+- fixtures that behave the same way every single run
+- the discipline of reviewing AI-written code
 
 ## Codex prompt
 
@@ -34,7 +36,9 @@ npm test passes.
 Each test name reads like a rule statement.
 ```
 
-## Manual test
+## Try it yourself
+
+Run the suite and the build, and enjoy that wall of green:
 
 ```bash
 npm test

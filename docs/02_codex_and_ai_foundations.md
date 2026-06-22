@@ -1,10 +1,10 @@
 # 02 — Codex and AI foundations
 
-Read this before you write a single prompt. If you have never used an AI coding tool, start here. The rest of the tutorial assumes you understand these words.
+Read this before you write a single prompt. If you have never used an AI coding tool, you are in exactly the right place. The rest of the tutorial assumes you know these words, so let's get them under your belt.
 
 ## Why this page exists
 
-The other lessons tell you *what to build*. This page tells you *what the tool is* and *how to talk to it safely*. Five minutes here saves a lot of confusion later.
+The other lessons tell you *what to build*. This page tells you *what the tool is* and *how to talk to it safely*. Five minutes here saves you a pile of confusion later — promise.
 
 ## The vocabulary, in plain language
 
@@ -106,4 +106,4 @@ Prompt     = your instructions, your main control.
 Permissions= how much it may do before asking. Start strict.
 ```
 
-You are ready. Continue to `03_codex_vibe_coding_basics.md`.
+You are ready. Untap your mana and continue to `03_codex_vibe_coding_basics.md`.

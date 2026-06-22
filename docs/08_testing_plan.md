@@ -1,10 +1,12 @@
 # 08 — Testing plan
 
+Tests are how you go from "I think it works" to "I know it works." They're also your safety net when Codex confidently hands you code that looks perfect and isn't. Write them, trust them, sleep better.
+
 ## Purpose
 
-Rules code needs tests because AI-generated code can look correct while subtly breaking state transitions.
+Rules code needs tests because AI-generated code can look correct while subtly breaking state transitions. A test catches the lie that your eyes miss.
 
-Test pure functions. Avoid UI tests at first.
+Test pure functions. Avoid UI tests at first — the rules engine is where the value (and the bugs) live.
 
 ## Test files
 
@@ -78,7 +80,7 @@ src/tests/keywords.test.ts
 
 ## Keyword tests
 
-Add one keyword at a time.
+Keywords are where Magic gets spicy, so test them one at a time and let your coverage grow with your rules.
 
 First:
 

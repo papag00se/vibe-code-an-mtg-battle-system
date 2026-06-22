@@ -1,10 +1,10 @@
 # Prompt 00 — Bootstrap the repository
 
-Paste this into Codex first.
+This is your opening move. Paste this into Codex first and watch an empty folder turn into a real app — your battlefield gets its first lands.
 
 ```text
 Goal:
-Create a beginner-friendly React + TypeScript app called Stack Tutor.
+Create a beginner-friendly React + TypeScript app called Untap.
 
 Context:
 This repository contains Markdown walkthrough files for a free personal vibe-coding tutorial. The tutorial teaches programming through Magic: The Gathering rules concepts. It is unofficial fan content, not endorsed by Wizards of the Coast, and not a commercial game client.
@@ -36,7 +36,7 @@ Done when:
 - npm run dev works.
 - npm run build works.
 - npm test works.
-- The browser shows Stack Tutor, a static battlefield, and the footer notice.
+- The browser shows Untap, a static battlefield, and the footer notice.
 
 After implementation:
 Explain the project structure and how to run it.

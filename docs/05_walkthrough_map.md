@@ -1,5 +1,7 @@
 # 05 — Walkthrough map
 
+This is your battle plan. Untap grows one phase at a time, and each phase teaches a real coding concept while you build a real piece of the game. Glance at the map, then trust the order — it was tuned to keep you winning.
+
 ## Phase list
 
 | Phase | Feature | Coding concept |
@@ -21,7 +23,7 @@
 
 ## Build order
 
-Do not skip directly to combat or stack. The learner needs the progression:
+We know combat and the stack are the flashy parts. Resist! Each step builds on the last, so follow the progression and everything clicks:
 
 ```text
 Card search
@@ -40,6 +42,8 @@ Card search
 
 ## Milestone 1 — App shell
 
+First blood: get something on screen you can be proud of.
+
 Done when:
 
 - app runs
@@ -48,6 +52,8 @@ Done when:
 - static battlefield is visible
 
 ## Milestone 2 — Scryfall search
+
+Now Untap can find real cards. Type a name, watch Magic show up.
 
 Done when:
 
@@ -59,6 +65,8 @@ Done when:
 
 ## Milestone 3 — State lab
 
+Cards start moving between zones. This is where it begins to feel like a game.
+
 Done when:
 
 - zones exist
@@ -67,6 +75,8 @@ Done when:
 - event log records changes
 
 ## Milestone 4 — Rule lab
+
+The real rules come online: phases, mana, casting, and the stack resolving in order. The heart of Magic.
 
 Done when:
 
@@ -78,6 +88,8 @@ Done when:
 
 ## Milestone 5 — Battle lab
 
+Time to swing. Creatures attack, blockers step up, and life totals finally start to move.
+
 Done when:
 
 - attackers can be declared
@@ -87,6 +99,8 @@ Done when:
 - player life changes
 
 ## Milestone 6 — Trust lab
+
+Lock it in. Tests prove your rules really work, so you can keep building with confidence.
 
 Done when:
 

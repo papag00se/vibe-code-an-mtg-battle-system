@@ -1,8 +1,10 @@
 # 06 — Rules engine spec
 
+This is the brain of Untap — the part that actually knows the rules of Magic. Get this layer right and everything else gets easier. Keep it clean, keep it honest, and keep it separate from the UI.
+
 ## Design principle
 
-Rules logic should be pure functions where possible. React should display state and call rules functions. React should not contain the rules engine.
+Rules logic should be pure functions where possible. React should display state and call rules functions. React should not contain the rules engine. Think of it this way: React paints the picture, the rules engine decides what is true.
 
 ## Core types
 
@@ -23,9 +25,11 @@ type CombatStep =
 
 ## Card data vs card instance
 
-Card data describes a printed card or Scryfall object.
+This distinction trips up a lot of beginners, so let's be clear up front.
 
-Card instance describes a particular copy inside a specific game.
+Card data describes a printed card or Scryfall object — the platonic "Lightning Bolt."
+
+Card instance describes a particular copy inside a specific game — *this* Lightning Bolt, in your hand, owned by you.
 
 ```ts
 interface CardData {
@@ -113,11 +117,11 @@ interface LegalActionResult {
 }
 ```
 
-Use this so the UI can explain illegal moves instead of silently failing.
+Use this so the UI can explain illegal moves instead of silently failing. A button that quietly does nothing is frustrating; a button that says *why* is a tiny rules lesson.
 
 ## Simplifications
 
-Initial version ignores:
+Magic is gloriously complicated, and trying to model all of it on day one is a great way to give up. So we start small on purpose. The initial version ignores:
 
 - mulligans
 - sideboards
@@ -134,4 +138,4 @@ Initial version ignores:
 - ward / hexproof
 - damage prevention edge cases
 
-Add these later as lessons, one at a time.
+None of these are gone forever — they're just waiting in the wings. Add them later as lessons, one at a time, once the foundation is solid.

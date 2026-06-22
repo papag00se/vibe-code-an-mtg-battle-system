@@ -1,15 +1,17 @@
 # Lesson 10 — Keywords
 
-## Teaches
+Flying, trample, deathtouch — keywords are the spice of Magic, and there are a *lot* of them. Good news: you don't have to do them all at once. This lesson is about growing your rules engine one small, safe keyword at a time, testing each as you go. It's the same habit real engineers use to add features without breaking everything else. You'll get good at it fast.
 
-- incremental complexity
-- rule-specific tests
-- parsing Oracle text
-- growing a rules engine safely
+## What you'll teach Untap
+
+- adding complexity a little at a time
+- writing tests aimed at one specific rule
+- reading keywords out of a card's Oracle text
+- growing a rules engine without knocking it over
 
 ## Keyword order
 
-Start with the simplest useful rules:
+Start with the simplest useful rules and work your way up:
 
 ```text
 1. Flying
@@ -27,6 +29,8 @@ Start with the simplest useful rules:
 ```
 
 ## First keyword prompt: Flying
+
+Flying's a perfect first keyword — simple, iconic, and easy to test. Here's the prompt to hand Codex:
 
 ```text
 Goal:
@@ -50,6 +54,8 @@ Tests pass.
 ```
 
 ## Later keyword prompt template
+
+Once flying works, the rest follow the same shape. Reuse this template for each keyword down the list — just swap in the name and let Codex extend the engine:
 
 ```text
 Goal:

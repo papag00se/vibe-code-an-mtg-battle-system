@@ -2,9 +2,9 @@
 
 ## Project
 
-Stack Tutor: a free, unofficial Magic: The Gathering rules-learning and vibe-coding tutorial.
+This repository is the tutorial **"Build an MtG Battle System with AI!"** The app it builds is called **Untap** — a free, unofficial Magic: The Gathering rules-learning sandbox, made for vibe-coding practice.
 
-This repository teaches programming through MTG concepts. It is not an official Wizards of the Coast product. It is not a commercial game client. It is not intended to replace MTG Arena, Magic Online, SpellTable, or official Wizards products.
+The whole point is teaching programming through MTG concepts, in a friendly, beginner-readable way. Untap is not an official Wizards of the Coast product. It is not a commercial game client. It is not intended to replace MTG Arena, Magic Online, SpellTable, or official Wizards products.
 
 ## Stack
 
@@ -66,7 +66,7 @@ src/
 Use this footer text:
 
 ```text
-Stack Tutor is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. © Wizards of the Coast LLC.
+Untap is unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. © Wizards of the Coast LLC.
 ```
 
 ## Definition of done
